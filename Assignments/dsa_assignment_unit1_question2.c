@@ -9,7 +9,7 @@ int main() {
     int n, i, j, key;
     int shifts = 0;
 
-    printf("enter no.of students");
+    printf("enter no.of students:");
     scanf("%d", &n);
 
     int marks[n];

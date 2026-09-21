@@ -103,7 +103,7 @@ int main()
     
     while (top != -1)
     {
-        postfix[j++] = pop();
+        postfix[j = j+1] = pop();
     }
 
     postfix[j] = '\0';

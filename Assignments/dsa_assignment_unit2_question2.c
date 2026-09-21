@@ -88,9 +88,7 @@ int main() {
     CircularQueue q;
     initQueue(&q);
 
-    printf("===============================================================\n");
-    printf("  SERVICE CENTRE REQUEST BUFFER DEMO (BUFFER CAPACITY: %d)\n", MAX_SIZE);
-    printf("===============================================================\n\n");
+    printf("  SERVICE CENTRE REQUEST BUFFER DEMO (BUFFER CAPACITY: %d)\n", MAX_SIZE); 
 
     printf("--- Test 1: Underflow Condition ---\n");
     dequeue(&q);
