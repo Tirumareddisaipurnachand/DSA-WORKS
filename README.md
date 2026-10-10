@@ -1,0 +1,124 @@
+# Geospatial Place Extractor & Corrector
+
+A C-based geospatial text processing system that identifies location names in sentences and corrects misspelled place names using a large geographical database.
+
+## Overview
+
+The **Geospatial Place Extractor & Corrector** is a project developed in C that processes text containing geographical locations. It uses a location database derived from GeoNames to identify place names, match alternative names, and suggest corrections for misspelled locations.
+
+The project combines data structures, string processing, and approximate string matching to make geographical text processing more efficient.
+
+## Features
+
+- **Location Identification** – Detects geographical place names in input sentences.
+- **Spelling Correction** – Suggests the correct location for misspelled place names.
+- **Alternative Name Matching** – Supports alternate names and aliases stored in the database.
+- **Sentence Processing** – Processes sentences containing multiple locations.
+- **Large Database Support** – Designed to work with millions of geographical records.
+- **Population-Based Information** – Uses population and feature information to help distinguish locations.
+- **Efficient Searching** – Uses C programming and location search techniques to process geographical data.
+
+## Example
+
+**Input:**
+```text
+iam travelling from bombay to bangalore
+```
+
+**Expected result:**
+```text
+bombay -> Mumbai
+bangalore -> Bengaluru
+```
+
+*Note: Output may depend on the database records and correction logic implemented in the current version.*
+
+## Technologies Used
+
+- **Programming Language:** C
+- **Database Source:** GeoNames geographical data
+- **Concepts:** Data Structures, String Processing, Searching, Approximate String Matching, File Handling
+- **Tools:** GCC Compiler, Git, GitHub
+
+## Project Structure
+
+```text
+Geospatial-place-extractor/
+├── data/
+│   └── locations.txt
+├── src/
+│   └── sentence_processor.c
+├── bin/
+│   └── location_search
+├── README.md
+└── ...
+```
+
+*The structure above represents the main project components; additional files may exist in your repository.*
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Tirumareddisaipurnachand/Geospatial-place-extractor.git
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd Geospatial-place-extractor
+```
+
+### 3. Check the Location Database
+
+Make sure `data/locations.txt` exists in the project directory.
+
+### 4. Compile the Program
+
+```bash
+gcc src/sentence_processor.c -o sentence_processor
+```
+
+### 5. Run the Program
+
+```bash
+./sentence_processor
+```
+
+**Important:** Run the program from the project root directory so that the relative path `data/locations.txt` resolves correctly.
+
+## How It Works
+
+1. Loads geographical records from the location database.
+2. Reads a sentence containing place names.
+3. Processes the text to identify possible geographical locations.
+4. Compares detected terms with known location names and alternate names.
+5. Applies the implemented matching and correction logic.
+6. Displays the identified locations and suggested corrections.
+
+## Learning Outcomes
+
+This project provides practical experience with:
+
+- File handling and large-scale text data processing in C.
+- Structures, arrays, and data organization.
+- String comparison and approximate matching.
+- Searching and geographical name resolution.
+- Debugging, performance considerations, and modular programming.
+
+## Future Improvements
+
+- Improve correction accuracy for similar place names.
+- Add support for more geographical entities and languages.
+- Optimize searching with indexing and efficient data structures.
+- Provide an interactive command-line interface.
+- Add performance benchmarks for large datasets.
+
+## Data Source
+
+Geographical data: [GeoNames](https://www.geonames.org/)
+
+Review the applicable GeoNames data license and attribution requirements before redistributing the dataset.
+
+*Built with C, data structures, and geographical data processing.*
